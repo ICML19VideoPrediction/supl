@@ -12,7 +12,10 @@ with open(list_file) as fp:
 for index in vid_list:
     gif_file = os.path.join(src_dir, index, '*.gif')
     gif_file = glob.glob(gif_file)
-    assert len(gif_file ) == 1, '%d' % len(gif_file)
+    if len(gif_file) != 1:
+        print(gif_file)
+        continue
+    # assert len(gif_file ) == 1, '%d' % len(gif_file)
     gif_file = gif_file[0]
 
     dst_file = os.path.join(dst_dir, index + '.gif')
