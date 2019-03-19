@@ -44,5 +44,5 @@ def gen_html():
     wr_fp.close()
 
 
-# cp_num()
-gen_html()
+cp_num()
+# gen_html()
